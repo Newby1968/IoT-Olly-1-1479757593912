@@ -1,0 +1,12 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: IoT-Olly-1
+  host: IoT-Olly-1
+  disk_quota: 1024M
+  services:
+  - IoT-Olly-1-cloudantNoSQLDB
+  - IoT-Olly-1-iotf-service
+  command: node --max-old-space-size=384 node_modules/node-red/red.js --settings ./bluemix-settings.js -v
